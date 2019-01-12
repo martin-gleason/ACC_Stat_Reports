@@ -1,6 +1,5 @@
 ---
 title: "ACC Stats 2018"
-author: "Martin Gleason"
 date: "1/11/2019"
 output: html_document
 
