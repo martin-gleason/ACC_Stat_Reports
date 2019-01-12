@@ -1,0 +1,37 @@
+---
+title: "ACC Stats 2018"
+author: "Martin Gleason"
+date: "1/11/2019"
+output: html_document
+
+---
+<style>
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+  color: white;
+  background-color: #008080;
+}
+
+</style>
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library("tidyverse")
+library("lubridate")
+library("kableExtra")
+source("collection_summary.R")
+```
+
+```{r table, include = TRUE, echo = FALSE}
+monthly_avg %>% 
+  kable(caption = "ACC 2018 Downloads By Month") %>%
+  kable_styling(bootstrap_options = c("striped", "bordered", "responsive", "hover"), 
+                font_size = 14) 
+```
+
+```{r plot, include = TRUE, echo = FALSE, fig.cap= "Monthly Downloads for 2019"}
+
+monthy_plot
+
+```
